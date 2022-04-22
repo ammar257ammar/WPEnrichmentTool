@@ -1,6 +1,6 @@
 # WPEnrichmentTool
 
-![GitHub top language](https://img.shields.io/github/languages/top/ammar257ammar/WPEnrichmentTool) ![Lines of code](https://img.shields.io/tokei/lines/github/ammar257ammar/WPEnrichmentTool) ![GitHub](https://img.shields.io/github/license/ammar257ammar/WPEnrichmentTool) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ammar257ammar/WPEnrichmentTool) ![Docker Cloud Build Status](https://img.shields.io/docker/cloud/build/aammar/wp-enrichment-tool) [![Dockerhub](https://img.shields.io/badge/dockerhub-aammar%2Fwp-enrichment-tool-green)](https://hub.docker.com/r/aammar/wp-enrichment-tool) 
+![GitHub top language](https://img.shields.io/github/languages/top/ammar257ammar/WPEnrichmentTool) ![Lines of code](https://img.shields.io/tokei/lines/github/ammar257ammar/WPEnrichmentTool) ![GitHub](https://img.shields.io/github/license/ammar257ammar/WPEnrichmentTool) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ammar257ammar/WPEnrichmentTool) [![Dockerhub](https://img.shields.io/badge/dockerhub-aammar%2Fwp--enrichment--tool-green)](https://hub.docker.com/r/aammar/wp-enrichment-tool)
 
 WPEnrichmentTool is a java command line tool to perform pathway enrichment (over-representation analysis) on differential gene expression contrasts using WikiPathways pathways. 
 
