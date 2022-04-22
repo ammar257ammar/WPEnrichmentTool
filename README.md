@@ -8,7 +8,7 @@ This tool uses the [PathVisio](https://github.com/PathVisio/pathvisio) v3.3.0 as
 
 **NOTE:** WPEnrichmentTool supports only Ensembl gene IDs. Therefore, the gene IDs in the differential gene expression contrast should be provided as Ensembl gene IDs.
 
-WPEnrichmentTool was developed as part of the NanoLinksKG project to empower the constructed knowledge graph from nanosafety data with pathway enrichment results beside the differentially expressed gene obtained from transcriptomics experiments of nanomaterial treatments.
+WPEnrichmentTool was developed as part of the NanoLinksKG project to empower the constructed knowledge graph from nanosafety data with pathway enrichment results besides the differentially expressed genes obtained from transcriptomics experiments of nanomaterial treatments.
 
 To build the docker image of WPEnrichmentTool, please follow the instructions.
 
@@ -26,9 +26,9 @@ docker pull aammar/wp-enrichment-tool:latest
 
 ## Build the Docker
 
-### First, clone this repository and "cd" to its directory.
+- First, clone this repository and "cd" to its directory.
 
-### Second, build the Docker image
+- Second, build the Docker image
 
 ```bash
 docker build -t wp-enrichment-tool .
@@ -40,10 +40,10 @@ docker build -t wp-enrichment-tool .
 
 ```bash
 docker run -it --rm --name wpet \
-			   -v PATH_TO_PATHWAYS:/pathways \
-			   -v PATH_TO_BRIDGE_DB_DERBY_FILES:/db \
-			   -v PATH_TO_DATA:/data
-			   aammar/wp-enrichment-tool PATH_TO_DEG_CONTRAST_CSV ORGANISM_NAME EXPRESSION GENE_ID_COLUMN_INDEX
+	-v PATH_TO_PATHWAYS:/pathways \
+	-v PATH_TO_BRIDGE_DB_DERBY_FILES:/db \
+	-v PATH_TO_DATA:/data
+	aammar/wp-enrichment-tool PATH_TO_DEG_CONTRAST_CSV ORGANISM_NAME EXPRESSION GENE_ID_COLUMN_INDEX
 ```
 
 The placeholders in the previous command should be replace as follows:
