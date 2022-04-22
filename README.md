@@ -1,6 +1,6 @@
 # WPEnrichmentTool
 
-![GitHub top language](https://img.shields.io/github/languages/top/ammar257ammar/WPEnrichmentTool) ![Lines of code](https://img.shields.io/tokei/lines/github/ammar257ammar/WPEnrichmentTool) ![GitHub](https://img.shields.io/github/license/ammar257ammar/WPEnrichmentTool) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ammar257ammar/WPEnrichmentTool) [![Dockerhub](https://img.shields.io/badge/dockerhub-aammar%2Fwp--enrichment--tool-green)](https://hub.docker.com/r/aammar/wp-enrichment-tool) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/aammar/wp-enrichment-tool/latest)
+![GitHub top language](https://img.shields.io/github/languages/top/ammar257ammar/WPEnrichmentTool) ![Lines of code](https://img.shields.io/tokei/lines/github/ammar257ammar/WPEnrichmentTool) ![GitHub](https://img.shields.io/github/license/ammar257ammar/WPEnrichmentTool) ![GitHub release (latest by date)](https://img.shields.io/github/v/release/ammar257ammar/WPEnrichmentTool) [![Dockerhub](https://img.shields.io/badge/dockerhub-aammar%2Fwp--enrichment--tool-green)](https://hub.docker.com/r/aammar/wp-enrichment-tool) ![Docker Image Size (tag)](https://img.shields.io/docker/image-size/aammar/wp-enrichment-tool/latest) [![DOI](https://zenodo.org/badge/484464996.svg)](https://zenodo.org/badge/latestdoi/484464996)
 
 WPEnrichmentTool is a java command line tool to perform pathway enrichment (over-representation analysis) on differential gene expression contrasts using WikiPathways pathways. 
 
