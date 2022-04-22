@@ -1,0 +1,73 @@
+<project xmlns:ivy="antlib:org.apache.ivy.ant"
+    name="dateUtilsProject" default="main" basedir=".">
+    <description>
+        WPEnrichmentTool Ant build script
+    </description>
+
+    <property name="projectName" value="WPEnrichmentTool" />
+    <property name="src.dir" location="src" />
+    <property name="build.dir" location="bin" />
+    <property name="dist.dir" location="dist" />
+    <property name="dist.lib.dir" location="dist/lib" />
+    <property name="lib.dir" value="lib" />
+    <property name="main-class" value="io.github.ammar257ammar.wp.enrichment.App" />
+
+    <target name="init">
+        <mkdir dir="${build.dir}" />
+    </target>
+
+    <path id="classpath">
+        <fileset dir="${basedir}/">
+            <include name="${lib.dir}/*.jar" />
+            <exclude name="${lib.dir}/*sources.jar"/>
+            <exclude name="${lib.dir}/*javadoc.jar"/>
+        </fileset>
+    </path>
+
+    <!-- we need the classpath to compile with external libraries -->
+    <target name="compile" depends="init" description="compile java source files">
+        <javac includeantruntime="false" srcdir="${src.dir}" destdir="${build.dir}" classpathref="classpath" />
+    </target>
+
+    <!-- prepare the classpath name of external libraries -->
+    <pathconvert property="classpath.name" pathsep=" ">
+        <path refid="classpath" />
+        <mapper>
+            <chainedmapper>
+                <flattenmapper />
+                <globmapper from="*.jar" to="lib/*.jar" />
+            </chainedmapper>
+        </mapper>
+    </pathconvert>
+
+    <target name="copy-dependencies">
+        <copy todir="${dist.lib.dir}">
+            <fileset dir="${lib.dir}" includes="**/*.jar" excludes="**/*sources.jar, **/*javadoc.jar" />
+        </copy>
+    </target>
+
+    <!-- package the JAR and add the external libraries paths to the manifest.mf file -->
+    <target name="jar" depends="compile, copy-dependencies" description="package the JAR">
+
+        <echo message="classpath.name : ${classpath.name} " />
+
+        <mkdir dir="${dist.dir}" />
+        <mkdir dir="${dist.lib.dir}" />
+
+        <jar jarfile="${dist.dir}/${projectName}.jar" basedir="${build.dir}">
+            <manifest>
+                <attribute name="Main-Class" value="${main-class}" />
+                <attribute name="Class-Path" value="${classpath.name}" />
+            </manifest>
+        </jar>
+    </target>
+
+    <target name="clean" description="clean up">
+        <delete dir="${build.dir}" />
+        <delete dir="${dist.dir}" />
+    </target>
+
+    <!-- Default, run this -->
+    <target name="main" depends="clean, compile, jar" />
+
+</project>
