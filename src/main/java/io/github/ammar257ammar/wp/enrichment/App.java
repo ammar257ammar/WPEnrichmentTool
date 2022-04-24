@@ -41,7 +41,7 @@ public class App {
 			System.out.println("1- input CSV file path");
 			System.out.println("2- organism name to load the proper BirdgeDB (e.g. homo_sapiens)");
 			System.out.println("3- criteria for evaluation (typically an expression like: [logFC] > 0.58 AND [adj.P.Val] < 0.05");
-			System.out.println("4- (OPTIONAL) Gene ID column zero-based index (default to the first column, default value: 0");
+			System.out.println("4- (OPTIONAL) Gene ID column zero-based index (default to the first column, default value: 0)");
 
 			System.exit(0);
 		}
