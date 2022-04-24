@@ -90,5 +90,5 @@ The placeholders in the previous command should be replace as follows:
 | Photodynamic therapy-induced NF-kB survival signaling        | 4.37    | 0.000   | 3               | ENSG00000077150&#124;ENSG00000136244&#124;ENSG00000081041    |
 | H19 action Rb-E2F1 signaling and CDK-Beta-catenin activity   | 4.26    | 0.000   | 2               | ENSG00000141682&#124;ENSG00000101384                         |
 
-\* **numberOfPositives** is the number of genes that assessed positive for the evaluation expression and the **geneList** column provided the actual Ensembl IDs for those genes separated by '|' character.  
+\* **numberOfPositives** is the number of genes which are assessed positive for the evaluation expression, while the **geneList** column provides the actual Ensembl IDs for those genes separated by '|' character.  
 
