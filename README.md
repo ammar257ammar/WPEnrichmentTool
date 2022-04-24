@@ -50,11 +50,11 @@ The placeholders in the previous command should be replace as follows:
 
 - PATH_TO_PATHWAYS: is the directory of WikiPathways pathways. You can download the latest version of the pathways from https://www.wikipathways.org/index.php/Download_Pathways and unzip the file to the directory PATH_TO_PATHWAYS.
 
-- PATH_TO_BRIDGE_DB_DERBY_FILES: is the directory where BridgeDB Derby database files are located. You can download the database related to your target species from https://zenodo.org/record/5970988#.YmKTlWgzaUl (Ensembl v103, April 2022). If you have multiple versions of the database for the same species, the tool will automatically select the most recent version.
+- PATH_TO_BRIDGE_DB_DERBY_FILES: is the directory where BridgeDB Derby database files are located. You can download the database related to your target species from https://zenodo.org/record/5970988#.YmKTlWgzaUl (Ensembl v103, February 2022). If you have multiple versions of the database for the same species, the tool will automatically select the most recent version.
 
 - PATH_TO_DATA: is the directory where you differential gene expression contrast CSV files are located.
 
-- PATH_TO_DEG_CONTRAST_CSV: is the path to the contrast CSV file that you want to get the enriched pathways for. **Note** that the path to the file is should always starts with "/data" since this is where you mapped your PATH_TO_DATA folder to.
+- PATH_TO_DEG_CONTRAST_CSV: is the path to the contrast CSV file that you want to get the enriched pathways for. **Note** that the path to the file should always start with "/data" since this is where you mapped your PATH_TO_DATA folder to.
 
 - ORGANISM_NAME: is the species name used by the tool to select and load the proper BridgeDB database. The value of this argument can be one of the following 16 species supported by WPEnrichmentTool:
 
@@ -77,7 +77,7 @@ The placeholders in the previous command should be replace as follows:
 
 - EXPRESSION: this is the evaluation criterial needed to calculate the z-score. Example: "[logFC] > 0.58 AND [adj.P.Val] < 0.05". In this example, logFC and adj.P.Val are the column names in the input CSV file. **Note** that you need to wrap the column names with square brackets (like in **[**logFC**]**).
 
-- GENE_ID_COLUMN_INDEX is the index of the column of Gene IDs in you contrast CSV file. This argument is optional if your gene ID column is the first column. In this case, the value "0" will be used to point to the first column. If your gene ID column index is not "0" (i.e. the first column in the CSV), then provide the index of the column.
+- GENE_ID_COLUMN_INDEX is the index of the column of Gene IDs in you contrast CSV file. This argument is optional if your gene ID column is the first column. In this case, the value "0" will be used to point to the first column. If your gene ID column index is not "0" (i.e. the first column in the CSV), then provide the index of that column.
 
 ## Example output file
 
