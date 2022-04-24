@@ -142,25 +142,29 @@ public class App {
 
 			for (StatisticsPathwayResult res : results) {
 
-				if (Double.parseDouble(res.getProperty(Column.ZSCORE)) > 0.0 && Integer.parseInt(res.getProperty(Column.R)) > 0
-						&& Double.parseDouble(res.getProperty(Column.ADJPVAL)) < 0.1) {
+				try {
+				
+					if (Math.abs(Double.parseDouble(res.getProperty(Column.ZSCORE))) > 1.0 && Integer.parseInt(res.getProperty(Column.R)) > 0
+							&& Double.parseDouble(res.getProperty(Column.ADJPVAL)) <= 0.05) {
 
-					Set<String> probesPositive = new HashSet<String>();
+						Set<String> probesPositive = new HashSet<String>();
 
-					for (PathwayInfo pi : pwyMap.getPathways()) {
+						for (PathwayInfo pi : pwyMap.getPathways()) {
 
-						if (pi.getName().equals(res.getProperty(Column.PATHWAY_NAME))) {
+							if (pi.getName().equals(res.getProperty(Column.PATHWAY_NAME))) {
 
-							for (Xref ref : pi.getSrcRefs()) {
-								probesPositive.addAll(dataMap.get(ref));
+								for (Xref ref : pi.getSrcRefs()) {
+									probesPositive.addAll(dataMap.get(ref));
+								}
 							}
 						}
-					}
 
-					outRows.add(
-							new String[] { res.getProperty(Column.PATHWAY_NAME).replace(',', ';'), res.getProperty(Column.ZSCORE),
-									res.getProperty(Column.ADJPVAL), res.getProperty(Column.R), String.join("|", probesPositive) });
-				}
+						outRows.add(
+								new String[] { res.getProperty(Column.PATHWAY_NAME).replace(',', ';'), res.getProperty(Column.ZSCORE),
+										res.getProperty(Column.ADJPVAL), res.getProperty(Column.R), String.join("|", probesPositive) });
+					}
+					
+				}catch(NumberFormatException ex) {}
 			}
 
 			if (outRows.size() > 0) {
