@@ -4,7 +4,7 @@
 
 WPEnrichmentTool is a java command line tool to perform pathway enrichment (over-representation analysis) on differential gene expression contrasts using WikiPathways pathways. 
 
-This tool uses the [PathVisio](https://github.com/PathVisio/pathvisio) v3.3.0 as a dependency library for pathway enrichment and the [BridgeDB](https://github.com/bridgedb/BridgeDb) dependency for gene identifier mapping.
+This tool uses the [PathVisio](https://github.com/PathVisio/pathvisio) v3.3.0 as a dependency library for pathway enrichment and the [BridgeDb](https://github.com/bridgedb/BridgeDb) dependency for gene identifier mapping.
 
 **NOTE:** WPEnrichmentTool supports only Ensembl gene IDs. Therefore, the gene IDs in the differential gene expression contrast should be provided as Ensembl gene IDs.
 
