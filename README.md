@@ -58,22 +58,22 @@ The placeholders in the previous command should be replace as follows:
 
 - ORGANISM_NAME: is the species name used by the tool to select and load the proper BridgeDB database. The value of this argument can be one of the following 16 species supported by WPEnrichmentTool:
 
- -homo_sapiens
- -mus_musculus
- -rattus_norvegicus
- -bos_taurus
- -caenorhabditis_elegans
- -canis_familiaris
- -ciona_intestinalis
- -drosophila_melanogaster
- -danio_rerio
- -gallus_gallus
- -macaca_mulatta
- -ornithorhynchus_anatinus
- -pan_troglodytes
- -equus_caballus
- -sus_scrofa
- -saccharomyces_cerevisiae
+       - homo_sapiens
+       - mus_musculus
+       - rattus_norvegicus
+       - bos_taurus
+       - caenorhabditis_elegans
+       - canis_familiaris
+       - ciona_intestinalis
+       - drosophila_melanogaster
+       - danio_rerio
+       - gallus_gallus
+       - macaca_mulatta
+       - ornithorhynchus_anatinus
+       - pan_troglodytes
+       - equus_caballus
+       - sus_scrofa
+       - saccharomyces_cerevisiae
 
 - EXPRESSION: this is the evaluation criterial needed to calculate the z-score. Example: "[logFC] > 0.58 AND [adj.P.Val] < 0.05". In this example, logFC and adj.P.Val are the column names in the input CSV file. **Note** that you need to wrap the column names with square brackets (like in **[**logFC**]**).
 
